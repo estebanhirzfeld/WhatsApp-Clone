@@ -1,0 +1,233 @@
+* {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar,
+.contact-list::-webkit-scrollbar,
+.chat::-webkit-scrollbar,
+.information::-webkit-scrollbar {
+    width: 0.4em;
+    height: 0.4em;
+}
+
+::-webkit-scrollbar-thumb,
+.contact-list::-webkit-scrollbar-thumb,
+.chat::-webkit-scrollbar-thumb,
+.information::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+/*  */
+
+.group-title {
+    margin: revert;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+body {
+    background-color: #dbdbdb;
+}
+
+i {
+    color: #aaaaaa;
+    text-align: center;
+    width: 60px;
+    margin: 0px 10px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg-chat {
+    border: 1px solid #ccc;
+    width: 80vw;
+    height: 90vh;
+    background-color: #e5ddd5;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1089577/background.png);
+}
+
+#bg-green {
+    background-color: #009688;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    height: 20vh;
+    z-index: -1;
+}
+/* Upper Nav ////////////////////////////// */
+
+#profileImage {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #004d3c;
+    font-size: 3.5rem;
+    color: #fff;
+    text-align: center;
+    line-height: 10rem;
+    margin: 10px;
+
+}
+
+#chat-head-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#upperNav {
+    background-color: #eeeeee;
+    width: 100%;
+    position: relative;
+    top: 0;
+    height: 60px;
+}
+
+.chat-head {
+    display: inline-flex;
+    width: 80%;
+    overflow-x: auto;
+}
+
+.chat-head:hover::-webkit-scrollbar-thumb,
+.contact-list::-webkit-scrollbar-thumb,
+.chat::-webkit-scrollbar-thumb,
+.information::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.chat-head img {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+/* ////////////////// */
+
+/* message-container ////// */
+.message-container {
+    height: 85%;
+    padding: 10px 30px 0px 30px;
+    overflow-y: auto;
+}
+/* message-container ////// */
+
+/* Bottom Nav //////////////// */
+#bottomNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #ccc;
+    background-color: #eeeeee;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    height: 60px;
+}
+
+#bottomNav input {
+    width: 80%;
+    height: 80%;
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: 10px;
+    font-size: 16px;
+    color: #aaaaaa;
+}
+/* Bottom Nav //////////////// */
+
+/* Messages ///////////////// */
+
+.me {
+    background: #dcf8c6;
+    margin: 0px 0px 10px auto;
+}
+
+.you {
+    background: #ffffff;
+    margin: 0px auto 10px 0px;
+}
+
+.my-mouth {
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #dcf8c6;
+    border-right: 10px solid transparent;
+    position: absolute;
+    bottom: 10px;
+    left: 100%;
+}
+
+.your-mouth {
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid white;
+    border-left: 10px solid transparent;
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+}
+
+.chat-bubble {
+    border-radius: 7px;
+    box-shadow: 0 2px 2px rgb(0 0 0 / 5%);
+    padding: 5px 7px;
+    width: 350px;
+    max-width: 100%;
+    position: relative;
+}
+.time {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 0.6em;
+    text-align: right;
+    margin-top: -10px;
+}
+
+.content {
+    margin: 0.5em 0;
+    line-height: 120%;
+    font-size: 0.9em;
+}
+/* Messages ///////////////// */
+
+
+/* media queries mobile */
+@media only screen and (max-width: 600px) {
+    #bg-chat {
+        width: 100vw;
+        height: 96vh;
+    }
+}
+
+/* media queries mobile lanscape */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    #bg-chat {
+        width: 100vw;
+        height: 96vh;
+    }
+}
+
+
+
+

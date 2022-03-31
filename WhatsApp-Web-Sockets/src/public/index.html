@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <script src="https://kit.fontawesome.com/592dce0dd2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <div>
+        <div id="bg-green"></div>
+        <div class="center">
+            <div id="bg-chat">
+                <nav id="upperNav">
+                    <div id="chat-head-container">
+                        <div class="chat-head">
+
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png"
+                                alt="">
+                            <h4 class="group-title">Super Whatsapp Group</h4>
+                        </div>
+                        <button><i class="fa fa-search fa-xl" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-paperclip fa-xl" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-bars fa-xl" aria-hidden="true"
+                                id="show-contact-information"></i></button>
+                    </div>
+                </nav>
+
+                <div id="log" class="message-container">
+                    <!--- Messages container -->
+
+                    <div class="chat-bubble me">
+                        <div class="my-mouth"></div>
+                        <div class="content">Hola a todos</div>
+                        <div class="time">2:40</div>
+                    </div>
+
+                    <div class="chat-bubble me">
+                        <div class="my-mouth"></div>
+                        <div class="content">sin nombre porque es secundario</div>
+                        <div class="time">2:40</div>
+                    </div>
+
+                    <div class="chat-bubble you">
+                        <div class="your-mouth"></div>
+                        <h4>Tony Montana</h4>
+                        <div class="content">Hi everyone</div>
+                        <div class="time">2:41</div>
+                    </div>
+
+                    <div class="chat-bubble you">
+                        <div class="your-mouth"></div>
+                        <div class="content">second message</div>
+                        <div class="time">2:42</div>
+                    </div>
+
+                </div>
+
+                <div id="bottomNav">
+                    <button><i class="fa fa-smile-o fa-lg" aria-hidden="true"></i></button>
+                    <input id="chatBox" placeholder="Escribe un mensaje" type="text" name="" id="">
+                    <button><i class="fa-solid fa-paper-plane fa-lg" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
