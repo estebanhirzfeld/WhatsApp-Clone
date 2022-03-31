@@ -38,11 +38,12 @@ chatBox.addEventListener("keyup", (e) => {
                 socket.emit("message", {
                     user: user,
                     message: chatBox.value.trim(),
-                    type: "image"    
+                    type: "image",    
+                    time: `${new Date().getHours()}:${new Date().getMinutes()}`
                 });
                 chatBox.value = "";
             }else{
-                socket.emit('message', { user, message: chatBox.value.trim() });
+                socket.emit('message', { user, message: chatBox.value.trim(), time: `${new Date().getHours()}:${new Date().getMinutes()}` });
                 chatBox.value = "";
             }
 
@@ -53,7 +54,7 @@ chatBox.addEventListener("keyup", (e) => {
 // Sockets
 
 socket.on('log', (data) => {
-    
+    console.log(data.time);
     let messages = '';
     data.forEach((log) => {
 
@@ -64,7 +65,7 @@ socket.on('log', (data) => {
                 <div class="chat-bubble me">
                 <div class="my-mouth"></div>
                 <div class="content">${log.message}</div>
-                <div class="time">2:40</div>
+                <div class="time">${log.time}</div>
             </div>
                 `
 
@@ -75,7 +76,7 @@ socket.on('log', (data) => {
                 <div class="content">
                 <a target="_blank" href="${log.message}"><img width="100%" src=${log.message}></a>
                 </div>
-                <div class="time">2:40</div>
+                <div class="time">${log.time}</div>
             </div>
                 `
             }
@@ -88,7 +89,7 @@ socket.on('log', (data) => {
                 <div class='your-mouth'></div>
                 <h4>${log.user}</h4>
                 <div class="content">${log.message}</div>
-                <div class="time">2:41</div>
+                <div class="time">${log.time}</div>
                 </div>
                 `
             } else {
@@ -99,7 +100,7 @@ socket.on('log', (data) => {
                 <div class="content">
                 <a target="_blank" href="${log.message}"><img width="100%" src=${log.message}></a>
                 </div>
-                <div class="time">2:40</div>
+                <div class="time">${log.time}</div>
             </div>
                 `
             }
