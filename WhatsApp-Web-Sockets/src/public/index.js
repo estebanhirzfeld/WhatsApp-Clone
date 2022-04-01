@@ -117,7 +117,7 @@ Swal.fire(
         }
     }
 ).then((result) => {
-    result.value = result.value.replace("<", '').replace(">", '');
+    result.value = result.value.replace("<", '').replace(">", '').replace("`", '');
     user = result.value;
 });
 
