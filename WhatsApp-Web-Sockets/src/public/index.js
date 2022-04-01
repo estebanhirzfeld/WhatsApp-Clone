@@ -122,7 +122,9 @@ Swal.fire(
 
 // Send Message on click
 sendMessage.addEventListener('click', function () {
+    if (chatBox.value.trim() !== "") {
     getInputMessage();
+    }
 })
 
 // Send Message on Enter
