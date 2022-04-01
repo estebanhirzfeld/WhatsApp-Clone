@@ -15,7 +15,7 @@ var elem = document.getElementById("message-container");
 
 // Text Image Url 
 const getInputMessage = () => {
-
+    chatBox.value = chatBox.value.replace("<", '');
     // if input starts with http:// or https://, open in new tab
     if (chatBox.value.trim().endsWith(".jpg") || chatBox.value.trim().endsWith(".png") || chatBox.value.trim().endsWith(".gif") || chatBox.value.trim().endsWith(".jpeg")) {
         socket.emit("message", {
@@ -245,11 +245,7 @@ socket.on('log', (data) => {
             }
         }
 
-
     })
-
-
-
 
     log.innerHTML = messages;
 });
