@@ -124,7 +124,7 @@ Swal.fire(
 // Send Message on click
 sendMessage.addEventListener('click', function () {
     if (chatBox.value.trim() !== "") {
-    getInputMessage();
+        getInputMessage();
     }
 })
 
@@ -206,7 +206,7 @@ socket.on('log', (data) => {
                     </div>
                         `
                     break;
-    
+
                 case "yt-video": // youtube video
                     return messages = messages + `
                         <div class="chat-bubble you">
@@ -219,7 +219,7 @@ socket.on('log', (data) => {
                     </div>
                         `
                     break;
-    
+
                 case "url": // url
                     return messages = messages + `
                         <div class="chat-bubble you">
@@ -232,7 +232,7 @@ socket.on('log', (data) => {
                     </div>
                         `
                     break;
-    
+
                 default: // text
                     return messages = messages + `
                         <div class="chat-bubble you">
@@ -250,3 +250,23 @@ socket.on('log', (data) => {
 
     log.innerHTML = messages;
 });
+
+
+
+
+
+// Emoji Button 
+let button = document.querySelector('.emoji-button');
+let input = document.querySelector('#chatBox');
+
+var picker = new EmojiButton({
+    position: 'auto-start',
+})
+
+picker.on('emoji', emoji => {
+    input.value += emoji;
+})
+
+button.addEventListener('click', () => {
+    picker.pickerVisible ? picker.hidePicker() : picker.showPicker(button);
+})
